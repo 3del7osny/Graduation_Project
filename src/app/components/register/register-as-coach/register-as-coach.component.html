@@ -1,0 +1,190 @@
+
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form class=" m-5 p-4 border rounded shadow">
+        <!-- <div class="text-center fs-2">
+          <fa-icon [icon]="faUser" class="fa-3x"></fa-icon>
+        </div> -->
+        <h2 class="text-center mb-4 "> As a {{title_coach}}</h2>
+
+        <div class="profile-section">
+          <div class="avatar-container">
+            <img [src]="imageSrc" alt="Profile Picture" class="avatar">
+            <input type="file" id="avatar-upload" class="avatar-upload" (change)="onFileSelected($event)">
+            <label for="avatar-upload" class="avatar-edit">Edit Image</label>
+          </div>
+        </div>
+
+        <div class=" form-floating pt-3">
+          <input type="text" class="form-control" id="fullName" placeholder="enter your name " required>
+          <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+        </div>
+
+
+        <div class="form-floating pt-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+          <label for="floatingInput">Email address <span class="text-danger">*</span></label>
+        </div>
+        <div class="form-floating pt-3">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+          <label for="floatingPassword">Password <span class="text-danger">*</span></label>
+        </div>
+        <div class="form-floating pt-3">
+          <input type="tel" class="form-control" id="inputPhone" placeholder="enter your phone"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+          <label for="inputPhone">Phone Number </label>
+
+        </div>
+        <div class="form-floating pt-3">
+          <input type="date" class="form-control" id="date" placeholder="enter data">
+          <label for="data">date of birth </label>
+        </div>
+
+        <div class="form-floating pt-3">
+          <input type="number" id="id" class="form-control" placeholder="Enter your ID" min="0" max="14">
+          <label for="data">Enter Your national ID </label>
+        </div>
+
+        <div class="form-floating pt-3">
+          <select id="numOfEx" class="form-control ">
+            <option selected>Choose...</option>
+            <option >1</option>
+            <option >2</option>
+            <option >3</option>
+            <option >4</option>
+            <option >5</option>
+            <option >6</option>
+            <option >7</option>
+            <option >more than 10 years</option>
+          </select>
+          <label for="inputCity" class="form-label">Number of experience</label>
+        </div>
+
+
+        <div class="form-floating pt-3">
+
+          <select id="inputCity" class="form-control ">
+            <option selected>Choose...</option>
+            <option>Alexandria</option>
+            <option>Aswan</option>
+            <option>Asyut</option>
+            <option>Beheira</option>
+            <option>Cairo</option>
+            <option>Dakahlia</option>
+            <option>Damietta</option>
+            <option>Faiyum</option>
+            <option>Gharbia</option>
+            <option>Giza</option>
+            <option>Ismailia</option>
+            <option>Kafr El Sheikh</option>
+            <option>Luxor</option>
+            <option>Matrouh</option>
+            <option>Minya</option>
+            <option>Monufia</option>
+            <option>New Valley</option>
+            <option>North Sinai</option>
+            <option>Port Said</option>
+            <option>Qalyubia</option>
+            <option>Qena</option>
+            <option>Red Sea</option>
+            <option>Sohag</option>
+            <option>South Sinai</option>
+            <option>Suez</option>
+          </select>
+          <label for="inputCity" class="form-label">City</label>
+        </div>
+        <div class="form-floating pt-3">
+          <input type="text" class="form-control" id="inputZip" placeholder="enter zip code">
+          <label for="inputZip" class="form-label">Zip</label>
+        </div>
+        <div class="d-flex align-items-center pt-3">
+          <label class="form-label text-start me-4">Gender</label>
+          <div class="d-flex end">
+            <div class="form-check form-check-inline me-4">
+              <input class="form-check-input" type="radio" name="gender" id="male">
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline me-2">
+              <input class="form-check-input" type="radio" name="gender" id="female" checked>
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check form-check-inline me-4">
+              <input class="form-check-input" type="radio" name="gender" id="other" checked>
+              <label class="form-check-label" for="other">other</label>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-12 pt-3">
+          <button type="submit" class="btn btn-primary w-100"onclick="showSuccessMessage()" >Sign Up</button>
+        </div>
+        <div class="card-footer text-right text-center my-3">
+          <small><a style="text-decoration: none;" routerLink="../logc">you have already account </a></small>
+        </div>
+        <div class="card-footer text-center " style="font-size: 20px; margin-top: 5px;">
+          <small>Registration As <a class="link-primary  link-opacity-90 link-opacity-100-hover"
+              style="text-decoration: none;" routerLink="../regt">{{title_trainee}}</a></small>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const avatarUpload = document.getElementById('avatar-upload');
+  const avatar = document.querySelector('.avatar');
+
+  avatarUpload.addEventListener('change', function() {
+  const file = this.files[0];
+  if (file) {
+              const reader = new FileReader();
+              reader.addEventListener('load', function() {
+              avatar.setAttribute('src', this.result);
+              });
+              reader.readAsDataURL(file);
+          }
+});
+
+function showSuccessMessage() {
+  // get all required inputs
+const requiredInputs = document.querySelectorAll("input[required]");
+
+  // check if all required inputs have a value
+let allInputsFilled = true;
+requiredInputs.forEach(input => {
+    if (input.value.trim() === "") {
+allInputsFilled = false;
+}
+});
+
+  // display success message if all inputs are filled out
+if (allInputsFilled) {
+// create and style message box as before
+const messageBox = document.createElement("div");
+messageBox.innerHTML = "Successful submission! :)";
+messageBox.style.backgroundColor = "#4CAF50";
+messageBox.style.color = "white";
+messageBox.style.padding = "10px";
+messageBox.style.position = "fixed";
+messageBox.style.top = "50%";
+messageBox.style.left = "50%";
+messageBox.style.transform = "translate(-50%, -50%)";
+messageBox.style.zIndex = "9999";
+document.body.appendChild(messageBox);
+
+// hide the message box after 3 seconds
+setTimeout(function() {
+messageBox.style.display = "none";
+}, 3000);
+}
+}
+
+
+</script>
+
