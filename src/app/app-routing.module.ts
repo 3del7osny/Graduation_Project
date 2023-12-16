@@ -10,22 +10,25 @@ import { RegisterAsTraineeComponent } from './components/register/register-as-tr
 import { ErrorsComponent } from './components/errors/errors.component';
 import { CoverComponent } from './components/cover/cover.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { AdditionComponent } from './components/addition/addition.component';
 
 
 
 
 const routes: Routes = [
-  {path:'',       component:HomeComponent},
-  {path:'home',   component:HomeComponent},
-  {path:'coaches',component:CoachesComponent},
-  {path:'courts', component:CourtsComponent},
-  {path:'logt',   component:LoginAsTraineeComponent},
-  {path:'logc',   component:LoginAsCoachComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path:'home',     component:HomeComponent},
+  {path:'coaches',  component:CoachesComponent},
+  {path:'courts',   component:CourtsComponent},
+  {path:'logt',     component:LoginAsTraineeComponent},
+  {path:'logc',     component:LoginAsCoachComponent},
   {path:'forget',   component:ForgetPasswordComponent},
-  {path:'regt',   component:RegisterAsTraineeComponent},
-  {path:'regc',   component:RegisterAsCoachComponent},
-  {path:'cover',   component:CoverComponent},
-  {path:'**',   component:ErrorsComponent},
+  {path:'regt',     component:RegisterAsTraineeComponent},
+  {path:'regc',     component:RegisterAsCoachComponent},
+  {path:'cover',    component:CoverComponent},
+  {path:'add',    component:AdditionComponent},
+
+  {path:'**',       component:ErrorsComponent},
 
 ];
 

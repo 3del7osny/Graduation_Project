@@ -16,10 +16,4 @@ export class MenuComponent {
   signup(){
       this.router.navigate(['/regt']);
     }
-
-  home(){
-        this.router.navigate(['/home']);
-      }
-
-
 }

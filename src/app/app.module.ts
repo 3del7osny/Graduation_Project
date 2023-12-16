@@ -11,13 +11,16 @@ import { LoginAsTraineeComponent } from './components/login/login-as-trainee/log
 import { LoginAsCoachComponent } from './components/login/login-as-coach/login-as-coach.component';
 import { RegisterAsCoachComponent } from './components/register/register-as-coach/register-as-coach.component';
 import { RegisterAsTraineeComponent } from './components/register/register-as-trainee/register-as-trainee.component';
-import { SharedModule } from './shared/shared.module';
 import { ErrorsComponent } from './components/errors/errors.component';
 import { CoverComponent } from './components/cover/cover.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { RouterModule } from '@angular/router';
+import { AdditionComponent } from './components/addition/addition.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -35,6 +38,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ErrorsComponent,
     CoverComponent,
     ForgetPasswordComponent,
+    AdditionComponent,
+    MenuComponent,
+    FooterComponent
 
 
 
@@ -47,9 +53,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule,
     FontAwesomeModule,
     HttpClientModule,
+
   ],
   providers: [ ],
   bootstrap: [AppComponent]
