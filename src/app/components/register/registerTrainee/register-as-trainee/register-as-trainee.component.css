@@ -1,22 +1,44 @@
-/* your-component.component.css */
+
+.header {
+  height:150px;
+  width:100%;
+  background:rgb(3, 22, 51);
+  background-blend-mode:multiply;
+  background-size:cover;
+  /* padding:50px 0 0 0; */
+  box-sizing:border-box;
+
+}
+h1 {
+  display:block;
+  width:50%;
+  margin:auto;
+  /* text-align:center; */
+  font-size:50px;
+  color:rgb(255, 255, 255);
+}
+
 .profile-section {
   text-align: center;
   margin-top: 20px;
 }
+
 
 .avatar-container {
   position: relative;
   width: 150px;
   height: 150px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 100px;
   margin: 0 auto;
 }
+
 
 .avatar {
   width: 100%;
   height: 100%;
   object-fit:fill;
+  border: aqua;
 }
 
 .avatar-upload {
@@ -36,11 +58,14 @@
   background-color: #1b2c37;
   padding: 5px 10px;
   color: #fff;
-  border-radius: 15px;
+  border-radius: 80px;
   cursor: pointer;
   display: none;
+
 }
 
 .avatar-container:hover .avatar-edit {
   display: block;
+
 }
+

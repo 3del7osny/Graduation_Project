@@ -6,11 +6,13 @@ import { CoachesComponent } from './components/coaches/coaches.component';
 import { LoginAsTraineeComponent } from './components/login/login-as-trainee/login-as-trainee.component';
 import { LoginAsCoachComponent } from './components/login/login-as-coach/login-as-coach.component';
 import { RegisterAsCoachComponent } from './components/register/register-as-coach/register-as-coach.component';
-import { RegisterAsTraineeComponent } from './components/register/register-as-trainee/register-as-trainee.component';
+import { RegisterAsTraineeComponent } from './components/register/registerTrainee/register-as-trainee/register-as-trainee.component';
 import { ErrorsComponent } from './components/errors/errors.component';
-import { CoverComponent } from './components/cover/cover.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
-import { AdditionComponent } from './components/addition/addition.component';
+import { RegisterAsTrainee2Component } from './components/register/registerTrainee/register-as-trainee2/register-as-trainee2.component';
+import { ProfileTraineeComponent } from './components/profile-trainee/profile-trainee.component';
+import { ProfileCoachComponent } from './components/profile-coach/profile-coach.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 
@@ -23,10 +25,13 @@ const routes: Routes = [
   {path:'logt',     component:LoginAsTraineeComponent},
   {path:'logc',     component:LoginAsCoachComponent},
   {path:'forget',   component:ForgetPasswordComponent},
-  {path:'regt',     component:RegisterAsTraineeComponent},
+  {path:'step1t',     component:RegisterAsTraineeComponent},
+  {path:'regt',     component:RegisterAsTrainee2Component},
   {path:'regc',     component:RegisterAsCoachComponent},
-  {path:'cover',    component:CoverComponent},
-  {path:'add',    component:AdditionComponent},
+  {path:'profileT',     component:ProfileTraineeComponent},
+  {path:'profileC',     component:ProfileCoachComponent},
+  {path:'admin',    component:AdminComponent},
+
 
   {path:'**',       component:ErrorsComponent},
 

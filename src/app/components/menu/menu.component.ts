@@ -14,6 +14,6 @@ export class MenuComponent {
   }
 
   signup(){
-      this.router.navigate(['/regt']);
+      this.router.navigate(['/step1t']);
     }
 }

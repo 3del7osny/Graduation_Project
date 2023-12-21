@@ -10,7 +10,7 @@ export class CoachesComponent{
   constructor(private router: Router) {}
 
   navigateToHome() {
-    this.router.navigate(['/']); // Replace '/' with the path of your home page
+    this.router.navigate(['/']); 
   }
 }
 

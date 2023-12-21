@@ -11,8 +11,11 @@ export class LoginAsCoachComponent {
   title_trainee ="Trainee"
   faLock =faLock ;
 
-  SignIn(){
-    const loginService = new LoginService();
-    loginService.OnSignInClick(this.title_coach);
-  }
+ // Inside your component class
+constructor(private loginService: LoginService) {}
+
+SignIn() {
+  // Call the OnSignInClick method from the injected service
+  this.loginService.OnSignInClick(this.title_coach);
+}
 }
