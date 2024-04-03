@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterAsTraineeComponent {
  // Define class properties and imports
-title_coach = "Coach";
-title_trainee = "Trainee";
+
 faUser = faUserPlus;
 imageSrc = '../../../assets/image/avatar.png';
 RegTrainee!: FormGroup;

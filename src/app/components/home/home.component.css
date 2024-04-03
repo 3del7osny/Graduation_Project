@@ -10,23 +10,6 @@ html, body {
   font-size: 9px;
 }
 
-header {
-  height:150px;
-  width:100%;
-  background:url('http://lorempixel.com/nature/1000/500') center center fixed rgb(3, 22, 51);
-  background-blend-mode:multiply;
-  background-size:cover;
-  padding:50px 0 0 0;
-  box-sizing:border-box;
-  & h1 {
-    display:block;
-    width:50%;
-    margin:auto;
-    text-align:center;
-    font-size:50px;
-    color:rgb(247, 250, 251);
-  }
-}
 
 .content {
   width:70%;
@@ -53,6 +36,15 @@ footer {
 
 
 
+.btn-custom {
+  border-radius: 40px;
+  background-color: #628730;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #0D1315;
+}
 
 
 

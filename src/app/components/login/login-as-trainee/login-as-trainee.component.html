@@ -1,60 +1,63 @@
-<!-- Container for the login form -->
-<div class="container-fluid mt-5">
+<div class="pic" style="position: relative; padding-top: 60px;">
+  <!-- Image element with a responsive style -->
+  <img src="../../../assets/image/parallax_02.jpg" alt="backgroundCoach"
+    style="position:absolute; width: 100%; height: 100%;">
 
-  <!-- Row to align the form in the center -->
-  <div class="row">
+  <!-- Semi-transparent black layer -->
+  <div style="position: absolute; top: 5; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
+  </div>
 
-    <!-- Column with medium width, offset to center the form -->
-    <div class="col-md-6 offset-md-3">
+  <!-- Container for the login form -->
+  <div class="container-fluid mt-5">
 
-      <!-- Login form with styling -->
-      <form class=" m-5 p-4 border rounded shadow">
+    <!-- Row to align the form in the center -->
+    <div class="row form-floating">
 
-        <!-- Title and icon for the form -->
-        <h2 class="text-center mb-4 mt-3">
-          <!-- Icon for the lock using Font Awesome -->
-          <div class="text-center">
-            <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+      <!-- Column with medium width, offset to center the form -->
+      <div class="col-md-6 offset-md-3">
+
+        <!-- Login form with styling -->
+        <form class=" m-5 p-4 border rounded shadow">
+
+          <!-- Title and icon for the form -->
+          <h2 class="text-center mb-4 mt-3">
+            <!-- Icon for the lock using Font Awesome -->
+            <div class="text-center">
+              <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+            </div>
+            Login Form
+          </h2>
+
+          <!-- Input field for email with floating label -->
+          <div class="form-floating pt-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <label for="floatingInput">Email address <span class="text-danger">*</span></label>
           </div>
-          As a {{title_trainee}}
-        </h2>
 
-        <!-- Input field for email with floating label -->
-        <div class="form-floating pt-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-          <label for="floatingInput">Email address <span class="text-danger">*</span></label>
-        </div>
+          <!-- Input field for password with floating label -->
+          <div class="form-floating pt-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+            <label for="floatingPassword">Password <span class="text-danger">*</span></label>
+          </div>
 
-        <!-- Input field for password with floating label -->
-        <div class="form-floating pt-3">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
-          <label for="floatingPassword">Password <span class="text-danger">*</span></label>
-        </div>
+          <!-- Checkbox for "Remember me" -->
+          <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Remember me
+            </label>
+          </div>
 
-        <!-- Checkbox for "Remember me" -->
-        <div class="form-check text-start my-3">
-          <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            Remember me
-          </label>
-        </div>
+          <!-- Button to submit the form -->
+          <div>
+            <button class="btn w-100 py-2 " type="submit" (click)="SignIn()">Sign In</button>
+          </div>
 
-        <!-- Button to submit the form -->
-        <div>
-          <button class="btn btn-primary w-100 py-2 " type="submit" (click)="SignIn()">Sign In</button>
-        </div>
-
-        <!-- Footer with a link for "Forgot Password" -->
-        <div class="card-footer text-right text-center my-3">
-          <small><a style="text-decoration: none;" routerLink="/forget">Forgot Password</a></small>
-        </div>
-
-        <!-- Footer with a link to sign in as a coach -->
-        <div class="card-footer text-center " style="font-size: 20px; margin-top: 5px;">
-          <small>Sign In As <a class="link-primary  link-opacity-90 link-opacity-100-hover"
-              style="text-decoration: none;" routerLink="/logc">{{title_coach}}</a></small>
-        </div>
-      </form>
+          <!-- Footer with a link for "Forgot Password" -->
+          <div class="card-footer text-right text-center my-3">
+            <small><a routerLink="/forget">Forgot Password</a></small>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>

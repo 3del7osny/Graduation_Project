@@ -3,20 +3,31 @@ html {
 }
 
 header {
-  height:150px;
-  width:100%;
-  background:url('http://lorempixel.com/nature/1000/500') center center fixed rgb(3, 22, 51);
-  background-blend-mode:multiply;
-  background-size:cover;
-  padding:50px 0 0 0;
+  height: 150px;
+  width: 100%;
+  background-color: #628730;
+  background-blend-mode: multiply;
+  background-size: cover;
+  padding: 50px 0 0 0;
   margin-top: 60px;
-  box-sizing:border-box;
+  box-sizing: border-box;
+
   & h1 {
-    display:block;
-    width:50%;
-    margin:auto;
-    text-align:center;
-    font-size:50px;
-    color:rgb(234, 235, 237);
+    display: block;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(234, 235, 237);
   }
+}
+
+.btn-custom {
+  border-radius: 40px;
+  background-color: #628730;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #0D1315;
 }

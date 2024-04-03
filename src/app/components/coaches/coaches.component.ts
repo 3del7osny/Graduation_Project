@@ -9,8 +9,12 @@ import { Router } from '@angular/router';
 export class CoachesComponent{
   constructor(private router: Router) {}
 
-  navigateToHome() {
-    this.router.navigate(['/']); 
+  navigateToCoach() {
+    // Check the coachId and navigate accordingly
+
+        // Navigate to details for Coach 1
+        this.router.navigate(['/details']);
+
   }
 }
 
