@@ -21,3 +21,21 @@
 .btn.btn-custom:hover {
   background-color: #0D1315;
 }
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+header {
+  animation: zoomInOut 5s infinite;
+}
